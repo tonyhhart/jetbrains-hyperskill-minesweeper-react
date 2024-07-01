@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    place-content: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 40px); /* Creates 8 columns each 40px wide */
+    grid-template-rows: repeat(9, 40px); /* Creates 9 rows each 40px high */
+    gap: 2px; /* Optional: adds a gap between cells */
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell.open {
+    background-color: #bbb; /* Lighter color for opened cells */
+    border-color: #999;
+}
+
+.cell.mined {
+    background-image: url("/");
+}
+
+.cell.flagged {
+    background-color: #d0d0f0; /* Different color for flagged cells */
+    background-image: url("/");
+}
+
+.header, .footer {
+    text-align: center;
+    margin: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
